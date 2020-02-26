@@ -51,10 +51,10 @@
   <main id = "tweets-container" class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form class="form-inline" action="/tweets/" method="POST">
+      <form class="form-inline" action="/tweets" method="POST">
         <textarea name="text" placeholder="What are you humming about?"></textarea>
 
-        <div class="tweet-button">
+        <div id = "clicktweet" class="tweet-button">
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </div>
