@@ -1,0 +1,111 @@
+.new-tweet textarea {
+width: 100%;
+/* line-height: 0.7; */
+height: 1.5em;
+background-color: transparent;
+border: none;
+border-bottom: 3px solid rgb(12, 11, 11);
+margin-bottom: 7px;
+resize: none;
+font-weight: 700;
+}
+
+.new-tweet input {
+font-family: "Bungee", sans-serif;
+background-color: cornflowerblue;
+border: black;
+}
+
+.new-tweet {
+  width: 100%;
+}
+
+
+.tweet-button {
+display: flex;
+justify-content: space-between;
+font-weight: 300;
+font-family: "Bungee", sans-serif;
+
+}
+
+.tweets {
+  width: 100%;
+  border: 3px solid black;
+  margin-top:40px ;
+  padding: 15px;
+}
+
+.tweets:hover {
+  box-shadow: 5px 5px gray; /*Box hover */
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.footer {
+
+display: flex;
+justify-content: space-between;
+ height: 30px; /*Footer space between */
+ font-size: 15px;
+
+}
+
+.footer p {
+  margin: 0; /*pushed up the footer note*/
+}
+
+.footer ul {
+  display: flex;
+  list-style: none;
+  margin: 0; /*flex display, and take out list bulletins, margin pushed up */
+}
+
+.footer ul li {
+margin-left: 4px; /*makes space in between the list*/
+}
+
+hr {
+  width: 97%;
+  height: 1.5px;
+  background-color: black; /*makes the border line */
+}
+
+.minilogo {
+height: 50px;
+width: 50px;
+border-radius: 50%;
+margin-right: 5px; /*adjust the mini picture size */
+
+
+}
+
+.articleHead {
+  display: flex;
+  align-items: center; /* condenses everything of article into center for tweetbox */
+  
+
+}
+
+.tweetHeader1 {
+  display: flex;
+  justify-content: space-between; /* The header section - space center*/
+  font-size: 18px;
+
+
+}
+.tweeter-handle p{ /* make colour of handle transparent */
+  color: transparent;
+  /* display: none; */
+}
+
+.tweets:hover .tweeter-handle p{ /*make tweets box's handle hover */
+ color: gray;
+ /* display: block; */
+}
+

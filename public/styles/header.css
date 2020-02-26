@@ -1,0 +1,22 @@
+.navheader {
+  background-color: #000047;
+background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  margin: 120px 0 0 0;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  color: antiquewhite;
+
+  padding: 2ems;
+}
+
+
+img {
+  height: 256px;
+  width: 256px;
+  border-radius: 50%;
+}

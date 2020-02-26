@@ -1,0 +1,45 @@
+nav {
+background: #4056A1;
+height: 120px;
+color: #ffffff; 
+z-index: 10;
+width: 100%;
+padding: 1.5em;
+position: fixed;
+top: 0;
+display: flex; /* makes it so there is space in between, doesnt go below each other*/
+justify-content: space-between;
+align-items: center;
+}
+
+nav > span {
+  font-family: "Bungee", sans-serif;
+  
+}
+
+nav > p {
+  margin: 15px
+} 
+
+.logo {
+  font-family: "Bungee", sans-serif;
+}
+
+/* html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+/* body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+ /* */ 
