@@ -10,6 +10,8 @@ resize: none;
 font-weight: 700;
 }
 
+
+
 .new-tweet input {
 font-family: "Bungee", sans-serif;
 background-color: cornflowerblue;
@@ -47,6 +49,7 @@ font-family: "Bungee", sans-serif;
 }
 
 .form-inline {
+  display: none;
   margin-top: 60px;
 }
 
@@ -113,12 +116,41 @@ margin-right: 5px; /*adjust the mini picture size */
  /* display: block; */
 }
 
+
 .alert {
-  display: none;
   margin-top: 25px;
   padding: 10px;
   border: 5px solid red;
+  color: red;
+  display: none;
+}
+
+
+
+.alert h3 {
+  margin: 0;
+}
+.warning{
+display:flex;
+align-items: center;
+}
+
+#topButton {
+  position: fixed;
+  bottom: 40px;
+  right: 18px;
+  font-size: 45px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  color: cornflowerblue;
+  border: none;
+  cursor: pointer;
+  display: none;
+  
+}
+
+.flexAlert {
   display: flex;
   justify-content: space-between;
-  color: red;
 }

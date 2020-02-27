@@ -20,6 +20,11 @@ nav > span {
 nav > p {
   margin: 15px;
 
+  @keyframes bounce { 
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50px); }
+  }
+
 
 } 
 
@@ -32,8 +37,12 @@ align-items: center;
 padding: 0px;
 position: absolute;
 margin-top: 60px;
- 
- 
+animation: heyjump .5s infinite;
+}
+
+@keyframes heyjump {
+  0%{transform: translateY(0px);}
+  50%{transform: translateY(-5px)}
 }
 
 nav div {

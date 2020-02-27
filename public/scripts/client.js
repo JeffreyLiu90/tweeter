@@ -6,6 +6,8 @@ unix time stamp
  */
 $(document).ready(function () {
 
+  
+
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -23,18 +25,20 @@ $(document).ready(function () {
 
     const textarea = $(".new-tweet textarea").val();
     if (isEntryValid(textarea) === false) {
-  
-      $(".alert span").text("invalid entry").slideDown('slow')
+      $(".alert h3").text("Not a valid Tweet")
+      $(".alert").fadeIn('slow')
 
     } else if (entryLength(textarea) === false) {
-      $(".alert span").text("You've reached maximum allowed character count ").slideDown('slow')
+      $(".alert h3").text("You've reached maximum allowed character count ")
+      $(".alert").fadeIn('slow')
     } else {
       $.ajax({
         url: '/tweets',
         type: 'POST',
         data: $form.serialize(),
         success: function() {
-          $(".alert span").slideUp("slow")
+          $(".alert").fadeOut('slow')
+          // $(".alert span").slideUp("slow")
           loadTweets()
       }
 
@@ -135,17 +139,32 @@ $(document).ready(function () {
 }
 
 $( "#new-tweet-button" ).click(function() {
-  $( ".form-inline" ).slideToggle( "slow" );
+  $( ".form-inline" ).toggle( "slow" );
 });
 
 $( "#new-tweet-button").click(function() {
   $( "textarea" ).focus();
 });
 
-$( "#new-tweet-button" ).click(function() {
- slideDown( "slow" );
+
+
+$(window).scroll(function(){
+  if($(this).scrollTop() > 650) {
+  $('#topButton').fadeIn();
+  }else {
+    $('#topButton').fadeOut();
+  }
 });
- 
+
+
+
+$("#topButton").click(function(){
+$('html, body').animate({scrollTop : 0}, 800)
+$( ".form-inline" ).slideDown( "slow" );
+
+
+})
+
 
 
 });
