@@ -18,8 +18,43 @@ nav > span {
 }
 
 nav > p {
-  margin: 15px
+  margin: 15px;
+
+
 } 
+
+#new-tweet-button {
+  background-color: #4056A1;
+  border: none;
+  cursor: pointer;
+  display: flex;
+align-items: center;
+padding: 0px;
+position: absolute;
+margin-top: 60px;
+ 
+ 
+}
+
+nav div {
+  display: flex;
+ align-items: center;
+ 
+
+}
+
+nav div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#new-tweet-button:hover {
+  color: #ffffff;
+
+}
+
 
 .logo {
   font-family: "Bungee", sans-serif;

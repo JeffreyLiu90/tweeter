@@ -46,6 +46,10 @@ font-family: "Bungee", sans-serif;
 
 }
 
+.form-inline {
+  margin-top: 60px;
+}
+
 
 .footer {
 
@@ -109,3 +113,12 @@ margin-right: 5px; /*adjust the mini picture size */
  /* display: block; */
 }
 
+.alert {
+  display: none;
+  margin-top: 25px;
+  padding: 10px;
+  border: 5px solid red;
+  display: flex;
+  justify-content: space-between;
+  color: red;
+}

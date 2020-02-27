@@ -5,59 +5,41 @@ unix time stamp
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function () {
-  // Handler for .ready() called.
 
-  //   const $form = $(".form-inline");
-  //   const $textarea = $("textarea").val();
-  // $form.on("submit", event => {
-  //   event.preventDefault()
-  //   if($textarea === "") {
-  //     alert("invalidDDD")
-  //   } 
-  //   $.ajax ({
-  //   url: '/tweets',
-  //   type: 'POST',
-  //   data: $form.serialize()
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+  
 
-  //   })
-  // })
-
-
-
-
-  //   const $form = $(".form-inline");
-  //   const $textarea = $("textarea").val();
-  // $form.on("submit", event => {
-  //   event.preventDefault()
-  //   if(isEntryValid($textarea)) {
-  //     alert("invalidDDD")
-  //   } else {
-  //   $.ajax ({
-  //   url: '/tweets',
-  //   type: 'POST',
-  //   data: $form.serialize()
-
-  //   })
-  // }})
 
   const $form = $(".form-inline");
 
   $form.on("submit", event => {
     event.preventDefault()
 
+  
 
     const textarea = $(".new-tweet textarea").val();
     if (isEntryValid(textarea) === false) {
-      alert("invalid entry")
+  
+      $(".alert span").text("invalid entry").slideDown('slow')
+
     } else if (entryLength(textarea) === false) {
-      alert("youre input is too long")
+      $(".alert span").text("You've reached maximum allowed character count ").slideDown('slow')
     } else {
       $.ajax({
         url: '/tweets',
         type: 'POST',
-        data: $form.serialize()
+        data: $form.serialize(),
+        success: function() {
+          $(".alert span").slideUp("slow")
+          loadTweets()
+      }
 
       })
+      $(".form-inline")[0].reset();
     }
   })
 
@@ -122,7 +104,7 @@ $(document).ready(function () {
     </div>
   </header>
   <body>
-    <p>${content}</p>
+    <p>${escape(content)}</p>
   </body>
   <hr>
   <footer class="footer">
@@ -139,19 +121,31 @@ $(document).ready(function () {
   }
 
 
+
   // Test / driver code (temporary). Eventually will get this from the server.
 
   const renderTweets = function (tweets) {
+    $('#tweetsection').empty();
     for (let info of tweets) {
-      $('#tweets-container').append(createTweetElement(info));
+      const messages = createTweetElement(info)
+      $('#tweetsection').prepend(messages);
     }
-  }
+  
+  
+}
 
+$( "#new-tweet-button" ).click(function() {
+  $( ".form-inline" ).slideToggle( "slow" );
+});
 
+$( "#new-tweet-button").click(function() {
+  $( "textarea" ).focus();
+});
 
-
-
-
+$( "#new-tweet-button" ).click(function() {
+ slideDown( "slow" );
+});
+ 
 
 
 });

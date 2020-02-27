@@ -10,6 +10,7 @@
     type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
     rel="stylesheet">
+    
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -23,7 +24,7 @@
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
+  <script src="https://kit.fontawesome.com/2225c3f271.js" crossorigin="anonymous"></script>
 
 
 </head>
@@ -32,7 +33,12 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span class="logo">Tweeter</span>
-    <p>Write a New Tweet</p>
+    <div>
+        <p>Write a New Tweet</p>
+       <i id = "new-tweet-button" class="fas fa-angle-double-down"></i>
+  
+    </div>
+   
   </nav>
 
   <header class="navheader">
@@ -47,10 +53,22 @@
   </header>
 
 
+
   <!-- Page-specific (main) content here -->
   <main id = "tweets-container" class="container">
+
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
+
+     
+
+          <div class="alert">
+              <span class="closebtn"></span>
+         
+            </div>
+
+
+
+    
       <form class="form-inline" action="/tweets" method="POST">
         <textarea name="text" placeholder="What are you humming about?"></textarea>
 
@@ -63,7 +81,7 @@
     </section>
 
     <section>
-      <article class="tweets">
+      <article id = "tweetsection" class="tweets">
         <header class="tweetHeader1">
 
           <div class="articleHead">
