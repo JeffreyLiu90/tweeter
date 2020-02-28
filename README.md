@@ -12,7 +12,6 @@ Tweeter is project that replicates Twitter. It is Ajax based, and uses jQuery, H
 
 
 ## Dependencies
-
 - Node.js
 - AJAX
 - jQuery
@@ -22,8 +21,6 @@ Tweeter is project that replicates Twitter. It is Ajax based, and uses jQuery, H
 - Md5
 - Chance
 - Express
-
-
 
 
 ## Getting Started
