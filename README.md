@@ -22,7 +22,6 @@ Tweeter is project that replicates Twitter. It is Ajax based, and uses jQuery, H
 - Chance
 - Express
 
-
 ## Getting Started
 
 - Install all dependencies (using the `npm install` command).
