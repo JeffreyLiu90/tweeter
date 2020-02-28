@@ -1,6 +1,7 @@
+
+/* Text area */
 .new-tweet textarea {
 width: 100%;
-/* line-height: 0.7; */
 height: 1.5em;
 background-color: transparent;
 border: none;
@@ -10,27 +11,28 @@ resize: none;
 font-weight: 700;
 }
 
-
-
+/* Tweet Button */
 .new-tweet input {
 font-family: "Bungee", sans-serif;
 background-color: cornflowerblue;
 border: black;
+cursor: pointer;
 }
 
+/* Whole new tweet section  */
 .new-tweet {
   width: 100%;
 }
 
-
+/* Tweet button area and tweets */
 .tweet-button {
 display: flex;
 justify-content: space-between;
 font-weight: 300;
 font-family: "Bungee", sans-serif;
-
 }
 
+/* Individual tweets */
 .tweets {
   width: 100%;
   border: 3px solid black;
@@ -38,85 +40,87 @@ font-family: "Bungee", sans-serif;
   padding: 15px;
 }
 
+/* The shadow behind tweet box when hovered */
 .tweets:hover {
-  box-shadow: 5px 5px gray; /*Box hover */
+  box-shadow: 5px 5px gray; 
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-
-}
-
+/* Text area- to hide it when page load */
 .form-inline {
   display: none;
   margin-top: 60px;
 }
 
-
+/* Footer of each tweet with how many days ago posted and icons */
 .footer {
-
 display: flex;
 justify-content: space-between;
- height: 30px; /*Footer space between */
+ height: 30px; 
  font-size: 15px;
-
 }
 
+/* Pushing up the footer notes */
 .footer p {
-  margin: 0; /*pushed up the footer note*/
+  margin: 0;
 }
 
+/*flex display, and take out list bulletins, margin pushed up */
 .footer ul {
   display: flex;
   list-style: none;
-  margin: 0; /*flex display, and take out list bulletins, margin pushed up */
+  margin: 0; 
 }
 
+/*Makes space in between the icons or list*/
 .footer ul li {
-margin-left: 4px; /*makes space in between the list*/
+margin-left: 4px; 
 }
 
+/*Makes the border line */
 hr {
   width: 97%;
   height: 1.5px;
-  background-color: black; /*makes the border line */
+  background-color: black; 
 }
 
+/*Adjust the mini picture size */
 .minilogo {
 height: 50px;
 width: 50px;
 border-radius: 50%;
-margin-right: 5px; /*adjust the mini picture size */
-
-
+margin-right: 5px; 
 }
 
+/* Condenses everything of article into center for tweetbox */
 .articleHead {
   display: flex;
-  align-items: center; /* condenses everything of article into center for tweetbox */
-  
-
+  align-items: center; 
 }
 
+/* Makes the initial outline disappear on Chrome around the text area */
+textarea:focus{
+  outline: none;
+}
+
+/* Adjusts the spacing around the tweet box header */
 .tweetHeader1 {
   display: flex;
-  justify-content: space-between; /* The header section - space center*/
+  justify-content: space-between; 
   font-size: 18px;
-
-
 }
-.tweeter-handle p{ /* make colour of handle transparent */
+
+/* Makes Tweeter"s handle transparent */
+.tweeter-handle p{ 
   color: transparent;
-  /* display: none; */
 }
 
-.tweets:hover .tweeter-handle p{ /*make tweets box's handle hover */
+/*Make tweets box"s handle appear after hover */
+.tweets:hover .tweeter-handle p{ 
  color: gray;
  /* display: block; */
 }
 
-
+/* Alert message */
 .alert {
   margin-top: 25px;
   padding: 10px;
@@ -125,16 +129,26 @@ margin-right: 5px; /*adjust the mini picture size */
   display: none;
 }
 
-
+/* Wraps the text so they do not overflow */
+.tweet-wrapper {
+  word-wrap: break-word;
+}
 
 .alert h3 {
   margin: 0;
 }
+/* Warning signs */
 .warning{
 display:flex;
 align-items: center;
 }
 
+.flexAlert {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* The scroll up button */
 #topButton {
   position: fixed;
   bottom: 40px;
@@ -147,10 +161,7 @@ align-items: center;
   border: none;
   cursor: pointer;
   display: none;
+  outline: none;
   
 }
 
-.flexAlert {
-  display: flex;
-  justify-content: space-between;
-}

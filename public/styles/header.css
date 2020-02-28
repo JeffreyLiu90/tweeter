@@ -1,8 +1,9 @@
+/* profile picture area */
 .navheader {
   background-color: #000047;
 background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
-  margin: 120px 0 0 0;
-  height: 400px;
+  margin: 0px 0 0 0;
+  height: 520px;
   width: 100%;
   position: relative;
   display: flex;
@@ -10,13 +11,12 @@ background-image: url("https://www.transparenttextures.com/patterns/beige-paper.
   justify-content: flex-end;
   flex-direction: column;
   color: antiquewhite;
-
   padding: 2ems;
 }
 
-
+/* Profile picture */
 img {
   height: 256px;
   width: 256px;
-  border-radius: 50%;
+  border-radius: 18%;
 }

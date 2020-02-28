@@ -4,20 +4,22 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
+  <!-- To allow  -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
 
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
     rel="stylesheet">
-   
-    
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/responsive.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -31,97 +33,61 @@
 </head>
 
 <body>
-  <!-- Top nav bar (fixed) -->
+  <!-- Top navigation bar  -->
   <nav>
     <span class="logo">Tweeter</span>
     <div>
-        <p>Write a New Tweet</p>
-       <i id = "new-tweet-button" class="fas fa-angle-double-down"></i>
-  
+      <p id="write-a-tweet">Write a New Tweet</p>
+      <i id="new-tweet-button" class="fas fa-angle-double-down"></i>
     </div>
-   
   </nav>
 
-  <header class="navheader">
-
-    <div>
-      <img src="https://i.kym-cdn.com/photos/images/original/001/431/201/40f.png">
-    </div>
-    <br>
-    <div>
+  <!-- Profile area -->
+  <section class="media">
+    <header class="navheader">
+      <img src="https://66.media.tumblr.com/tumblr_m5w6saomRY1r01gymo1_400.gifv">
       <h2>Jeffrey Liu</h2>
-    </div>
-  </header>
+    </header>
 
 
+    <!-- Page-specific (main)- Tweet area -->
+    <main id="tweets-container" class="container">
 
-  <!-- Page-specific (main) content here -->
-  <main id = "tweets-container" class="container">
-
-    <section class="new-tweet">
-
-     
+      <section class="new-tweet">
 
         <div class="alert">
-            <div class="flexAlert">
-              <i class="fas fa-exclamation-triangle"></i>
-              <h3></h3>
-              <i class="fas fa-exclamation-triangle"></i>
-            </div>
+
+          <div class="flexAlert">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3></h3>
+            <i class="fas fa-exclamation-triangle"></i>
           </div>
 
-
-    
-      <form class="form-inline" action="/tweets" method="POST">
-        <textarea name="text" placeholder="What are you humming about?"></textarea>
-
-        <div id = "clicktweet" class="tweet-button">
-          <input type="submit" value="Tweet">
-          <span class="counter">140</span>
         </div>
 
-      </form>
-    </section>
+        <!-- Tweet text area and counter -->
+        <form class="form-inline" action="/tweets" method="POST">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
 
-    <section>
-      <article id = "tweetsection">
-        <!-- <header class="tweetHeader1">
-
-          <div class="articleHead">
-            <img class="minilogo" src="https://i.kym-cdn.com/photos/images/original/001/431/201/40f.png" alt="">
-            <p> Name</p>
-          </div>
-          <div class="tweeter-handle">
-            <p>@handle</p>
+          <div id="clicktweet" class="tweet-button">
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
           </div>
 
-        </header>
-        <body>
-          <p>This is my tweet</p>
-        </body>
-        <hr>
-        <footer class="footer">
-          <p>Date created</p>
-          <div>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-            </ul>
-          </div>
-        </footer> -->
-      </article>
-    </section>
+        </form>
+      </section>
 
+      <!-- Where the new article/user data and tweet will be inputted -->
+      <section>
+        <article id="tweetsection">
+        </article>
+      </section>
 
+    </main>
+  </section>
 
-
-
-  </main>
-
+  <!-- scroll up button -->
   <button id="topButton"><i class="fas fa-arrow-circle-up"></i></button>
-
+  
 </body>
-
-
 </html>
