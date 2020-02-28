@@ -1,17 +1,33 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is project that replicates Twitter. It is Ajax based, and uses jQuery, HTML5, CSS 3. The purpose of this project was to create a single page that loads and runs data asynchronously, meaning it will not have to reload once new data/tweet is inputted. 
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+## Final Product
 
-## Getting Started
+!["Screenshot of Tweeter Main Page"](https://github.com/JeffreyLiu90/tweeter/blob/master/docs/Tweeter%20Main%20Page%20with%20Text%20area%20enabled.png?raw=true)
+!["Screenshot Tweeter showing Error message when character count has exceeded"](https://github.com/JeffreyLiu90/tweeter/blob/master/docs/Tweeter%20Main%20Page%20showing%20exceeded%20character%20count.png?raw=true)
+!["Screenshot of Tweeter scroll up button"](https://github.com/JeffreyLiu90/tweeter/blob/master/docs/Tweeter%20Main%20Page%20showing%20the%20bottom%20of%20the%20page%20with%20a%20scroll%20up%20arrow%20button.png?raw=true)
 
-1. Fork this repository, then clone your fork of this repository.
-2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+
+
 
 ## Dependencies
 
+- Node.js
+- AJAX
+- jQuery
+- HTML5
+- CSS3
+- Body-Parser
+- MD5
+- Chance
 - Express
-- Node 5.10.x or above
+
+
+
+
+## Getting Started
+
+- Install all dependencies (using the `npm install` command).
+- Run the development
+- npm run local to run the test
