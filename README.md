@@ -19,7 +19,7 @@ Tweeter is project that replicates Twitter. It is Ajax based, and uses jQuery, H
 - HTML5
 - CSS3
 - Body-Parser
-- MD5
+- Md5
 - Chance
 - Express
 
