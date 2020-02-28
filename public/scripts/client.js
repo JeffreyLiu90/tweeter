@@ -99,7 +99,7 @@ $(document).ready(function () {
       $(".alert h3").text("Not a valid Tweet")
       $(".alert").fadeIn("slow")
     } else if (entryLength(textarea) === false) {
-      $(".alert h3").text("You"ve reached maximum allowed character count ")
+      $(".alert h3").text("You have reached maximum allowed character count ")
       $(".alert").fadeIn("slow")
     } else {
       $.ajax({ // If all pass, then AJAX post request and success function
