@@ -11,9 +11,7 @@ nav {
   display: flex; 
   justify-content: space-between;
   align-items: center;
-}
-
-
+};
 
 /* The bouncing arrow */
 #new-tweet-button {
@@ -25,24 +23,24 @@ nav {
   position: absolute;
   margin-top: 60px;
   animation: heyjump .5s infinite;
-}
+};
 
 /*Bouncing arrow function  */
 @keyframes heyjump {
   0%{transform: translateY(0px);}
   50%{transform: translateY(-5px)}
-}
+};
 
 /* Navigation bar- the write a new tweet and arrow area */
 nav div {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+};
 
 /* Tweeter letters */
 .logo {
   font-family: "Bungee", sans-serif;
   font-size: 50px;
-}
+};
 
