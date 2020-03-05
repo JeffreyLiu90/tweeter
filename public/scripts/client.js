@@ -7,7 +7,7 @@ $(document).ready(function() {
   };
 
   // Function to make sure the entry length is not more than than 140 characters
-  const entryLength = (entry) => {
+  const entryLength = entry => {
     if (entry.length > 140) {
       return false;
     } else {
@@ -16,7 +16,7 @@ $(document).ready(function() {
   };
 
   //Function to make sure the user does not only type empty strings
-  const isEntryValid = (entry) => {
+  const isEntryValid = entry => {
     if (entry === "") {
       return false;
     } else {
@@ -25,7 +25,7 @@ $(document).ready(function() {
   };
   //Function to convert the milliseconds to days
   const dayConverter = function(milliseconds) {
-    let difference = (new Date() - milliseconds);
+    let difference = new Date() - milliseconds;
     let minutes = Math.floor(difference / 60000);
     let hours = Math.round(minutes / 60);
     let days = Math.round(hours / 24);
@@ -63,7 +63,7 @@ $(document).ready(function() {
       </ul>
     </div>
   </footer>
-</article>`
+</article>`;
   };
 
   //Function to render tweets
@@ -73,7 +73,6 @@ $(document).ready(function() {
       const messages = createTweetElement(info);
       $("#tweetsection").prepend(messages);
     }
-
   };
   //Function to get the tweets entered and load them onto the page
   const loadTweets = function() {
@@ -81,27 +80,27 @@ $(document).ready(function() {
       url: "/tweets",
       type: "GET",
       data: "JSON"
-    })
-      .then(data => {
-        renderTweets(data);
-      });
+    }).then(data => {
+      renderTweets(data);
+    });
   };
   loadTweets();
-
 
   //Ajax function for when entering a tweet
   const $form = $(".form-inline");
   $form.on("submit", event => {
     event.preventDefault();
     const textarea = $(".new-tweet textarea").val();
-    if (isEntryValid(textarea) === false) {  //Make sure that the text is valid or not too long with above functions
+    if (isEntryValid(textarea) === false) {
+      //Make sure that the text is valid or not too long with above functions
       $(".alert h3").text("Not a valid Tweet");
       $(".alert").fadeIn("slow");
     } else if (entryLength(textarea) === false) {
       $(".alert h3").text("You have reached maximum allowed character count ");
       $(".alert").fadeIn("slow");
     } else {
-      $.ajax({ // If all pass, then AJAX post request and success function
+      $.ajax({
+        // If all pass, then AJAX post request and success function
         url: "/tweets",
         type: "POST",
         data: $form.serialize(),
@@ -147,5 +146,3 @@ $(document).ready(function() {
     $("textarea").focus();
   });
 });
-
-
