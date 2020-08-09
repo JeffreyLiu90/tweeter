@@ -1,4 +1,3 @@
-
 /* Text area */
 .new-tweet textarea {
   width: 100%;
@@ -9,7 +8,7 @@
   margin-bottom: 7px;
   resize: none;
   font-weight: 700;
-};
+}
 
 /* Tweet Button */
 .new-tweet input {
@@ -17,12 +16,12 @@
   background-color: cornflowerblue;
   border: black;
   cursor: pointer;
-};
+}
 
 /* Whole new tweet section  */
 .new-tweet {
   width: 100%;
-};
+}
 
 /* Tweet button area and tweets */
 .tweet-button {
@@ -30,95 +29,98 @@
   justify-content: space-between;
   font-weight: 300;
   font-family: "Bungee", sans-serif;
-};
+}
 
 /* Individual tweets */
 .tweets {
   width: 100%;
   border: 3px solid black;
-  margin-top:40px ;
+  margin-top: 40px;
   padding: 15px;
-};
+}
 
 /* The shadow behind tweet box when hovered */
 .tweets:hover {
-  box-shadow: 5px 5px gray; 
-};
+  box-shadow: 5px 5px gray;
+}
 
 /* Text area- to hide it when page load */
 .form-inline {
   display: none;
   margin-top: 60px;
-};
+}
 
+.tweetboxplaceholder {
+  font-size: 1.3rem;
+}
 /* Footer of each tweet with how many days ago posted and icons */
 .footer {
   display: flex;
   justify-content: space-between;
-  height: 30px; 
+  height: 30px;
   font-size: 15px;
-};
+}
 
 /* Pushing up the footer notes */
 .footer p {
   margin: 0;
-};
+}
 
 /*flex display, and take out list bulletins, margin pushed up */
 .footer ul {
   display: flex;
   list-style: none;
-  margin: 0; 
-};
+  margin: 0;
+}
 
 /*Makes space in between the icons or list*/
 .footer ul li {
-  margin-left: 4px; 
-};
+  margin-left: 4px;
+}
 
 /*Makes the border line */
 hr {
   width: 97%;
   height: 1.5px;
-  background-color: black; 
-};
+  background-color: black;
+}
 
 /*Adjust the mini picture size */
 .minilogo {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  margin-right: 5px; 
-};
+  margin-right: 5px;
+}
 
 /* Condenses everything of article into center for tweetbox */
 .articleHead {
   display: flex;
-  align-items: center; 
-};
+  align-items: center;
+}
 
 /* Makes the initial outline disappear on Chrome around the text area */
-textarea:focus{
+textarea:focus {
   outline: none;
-};
+}
 
 /* Adjusts the spacing around the tweet box header */
 .tweetHeader1 {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   font-size: 18px;
-};
+}
 
 /* Makes Tweeter"s handle transparent */
-.tweeter-handle p{ 
+.tweeter-handle p {
   color: transparent;
-};
+}
 
 /*Make tweets box"s handle appear after hover */
-.tweets:hover .tweeter-handle p{ 
+.tweets:hover .tweeter-handle p {
   color: gray;
- /* display: block; */
-};
+  /* display: block; */
+}
 
 /* Alert message */
 .alert {
@@ -127,27 +129,27 @@ textarea:focus{
   border: 5px solid red;
   color: red;
   display: none;
-};
+}
 
 /* Wraps the text so they do not overflow */
 .tweet-wrapper {
   word-wrap: break-word;
-};
+}
 
 .alert h3 {
   margin: 0;
-};
+}
 
 /* Warning signs */
-.warning{
-  display:flex;
+.warning {
+  display: flex;
   align-items: center;
-};
+}
 
 .flexAlert {
   display: flex;
   justify-content: space-between;
-};
+}
 
 /* The scroll up button */
 #topButton {
@@ -163,5 +165,4 @@ textarea:focus{
   cursor: pointer;
   display: none;
   outline: none;
-};
-
+}

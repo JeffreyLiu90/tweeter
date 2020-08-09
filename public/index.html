@@ -1,93 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Meta Information -->
+    <title>Tweeter - Home Page</title>
+    <!-- To allow  -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
 
-<head>
-  <!-- Meta Information -->
-  <title>Tweeter - Home Page</title>
-  <!-- To allow  -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/responsive.css" type="text/css" />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
-    rel="stylesheet">
+    <!-- External JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <!-- App CSS -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/responsive.css" type="text/css" />
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/ff0a200558.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-  <!-- External JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <body>
+    <!-- Top navigation bar  -->
+    <nav>
+      <span class="logo">Tweeter</span>
+      <div>
+        <p id="write-a-tweet">Write a New Tweet</p>
+        <i id="new-tweet-button" class="fas fa-angle-double-down"></i>
+      </div>
+    </nav>
 
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  <script src="https://kit.fontawesome.com/ff0a200558.js" crossorigin="anonymous"></script>
+    <!-- Profile area -->
+    <section class="media">
+      <header class="navheader">
+        <img
+          src="https://66.media.tumblr.com/tumblr_m5w6saomRY1r01gymo1_400.gifv"
+        />
+        <h2>Jeffrey Liu</h2>
+      </header>
 
-
-</head>
-
-<body>
-  <!-- Top navigation bar  -->
-  <nav>
-    <span class="logo">Tweeter</span>
-    <div>
-      <p id="write-a-tweet">Write a New Tweet</p>
-      <i id="new-tweet-button" class="fas fa-angle-double-down"></i>
-    </div>
-  </nav>
-
-  <!-- Profile area -->
-  <section class="media">
-    <header class="navheader">
-      <img src="https://66.media.tumblr.com/tumblr_m5w6saomRY1r01gymo1_400.gifv">
-      <h2>Jeffrey Liu</h2>
-    </header>
-
-
-    <!-- Page-specific (main)- Tweet area -->
-    <main id="tweets-container" class="container">
-
-      <section class="new-tweet">
-
-        <div class="alert">
-
-          <div class="flexAlert">
-            <i class="fas fa-exclamation-triangle"></i>
-            <h3></h3>
-            <i class="fas fa-exclamation-triangle"></i>
+      <!-- Page-specific (main)- Tweet area -->
+      <main id="tweets-container" class="container">
+        <section class="new-tweet">
+          <div class="alert">
+            <div class="flexAlert">
+              <i class="fas fa-exclamation-triangle"></i>
+              <h3></h3>
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
           </div>
 
-        </div>
+          <!-- Tweet text area and counter -->
+          <form class="form-inline" action="/tweets" method="POST">
+            <textarea
+              class="tweetboxplaceholder"
+              name="text"
+              placeholder="What are you humming about?"
+            ></textarea>
 
-        <!-- Tweet text area and counter -->
-        <form class="form-inline" action="/tweets" method="POST">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
+            <div id="clicktweet" class="tweet-button">
+              <input type="submit" value="Tweet" />
+              <span class="counter">140</span>
+            </div>
+          </form>
+        </section>
 
-          <div id="clicktweet" class="tweet-button">
-            <input type="submit" value="Tweet">
-            <span class="counter">140</span>
-          </div>
+        <!-- Where the new article/user data and tweet will be inputted -->
+        <section>
+          <article id="tweetsection"></article>
+        </section>
+      </main>
+    </section>
 
-        </form>
-      </section>
-
-      <!-- Where the new article/user data and tweet will be inputted -->
-      <section>
-        <article id="tweetsection">
-        </article>
-      </section>
-
-    </main>
-  </section>
-
-  <!-- scroll up button -->
-  <button id="topButton"><i class="fas fa-arrow-circle-up"></i></button>
-  
-</body>
+    <!-- scroll up button -->
+    <button id="topButton"><i class="fas fa-arrow-circle-up"></i></button>
+  </body>
 </html>

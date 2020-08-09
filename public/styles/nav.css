@@ -1,17 +1,17 @@
 /* Navigation Bar */
 nav {
-  background: #4056A1;
+  background: #4056a1;
   height: 120px;
-  color: #ffffff; 
+  color: #ffffff;
   z-index: 10;
   width: 100%;
   padding: 1.5em;
   position: fixed;
   top: 0;
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   align-items: center;
-};
+}
 
 /* The bouncing arrow */
 #new-tweet-button {
@@ -22,25 +22,28 @@ nav {
   padding: 0px;
   position: absolute;
   margin-top: 60px;
-  animation: heyjump .5s infinite;
-};
+  animation: heyjump 0.5s infinite;
+}
 
 /*Bouncing arrow function  */
 @keyframes heyjump {
-  0%{transform: translateY(0px);}
-  50%{transform: translateY(-5px)}
-};
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
 
 /* Navigation bar- the write a new tweet and arrow area */
 nav div {
   display: flex;
   flex-direction: column;
   align-items: center;
-};
+}
 
 /* Tweeter letters */
 .logo {
   font-family: "Bungee", sans-serif;
   font-size: 50px;
-};
-
+}

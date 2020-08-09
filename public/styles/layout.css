@@ -1,24 +1,24 @@
-
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
-};
+}
 
 /* Tweet container */
 .container {
   width: 90%;
-  margin: auto; 
+  margin: auto;
   background-color: #f4f1ec;
   position: relative;
   padding: 15px;
-};
+}

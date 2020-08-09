@@ -12,11 +12,11 @@
   flex-direction: column;
   color: antiquewhite;
   padding: 2ems;
-};
+}
 
 /* Profile picture */
 img {
   height: 256px;
   width: 256px;
   border-radius: 18%;
-};
+}
