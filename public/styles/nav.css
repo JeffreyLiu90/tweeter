@@ -47,3 +47,9 @@ nav div {
   font-family: "Bungee", sans-serif;
   font-size: 50px;
 }
+
+@media screen and(max-width:376px) {
+  .nav-write {
+    font-size: 12rem;
+  }
+}
